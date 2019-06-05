@@ -1,33 +1,124 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK:400,700&display=swap');
+
+body {
+  font-family: 'Noto Sans HK', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.kanye-icon {
+  /* animation: App-logo-spin infinite 20s linear; */
+  height: 15rem;
   pointer-events: none;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
+.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 2rem;
+  color: black;
+  transition: background-color linear 1s;
 }
 
-.App-link {
-  color: #61dafb;
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  align-self: flex-end;
+  box-sizing: border-box;
+  background-color: blue;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 2;
+  display: inline-block;
+  padding: 19px 25px 22px;
+  line-height: 17px;
+  font-size: 15px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  transition: box-shadow 0.3s, -webkit-transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.3s, transform 0.3s, -webkit-transform 0.3s;
+}
+
+.btn:hover {
+  transform: translate(5px, -4px);
+  color: #fff;
+  box-shadow: -10px 8px 0 #fff;
+  transition: all .25s cubic-bezier(0.83, 0.16, 0.38, 0.9) 0s;
+}
+
+.social-links {
+  align-self: flex-start
+}
+
+.quote-box {
+  width: 100%;
+  font-weight: 700;
+  background-color: transparent;
+  padding: 2rem 0 2rem;
+  border: 5px solid black;
+  margin-bottom: 2rem;
+}
+
+.author-span {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.container-quote-and-buttons {
+  padding: 0;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-social {
+  margin-right: 1rem;
+}
+
+.quote-paragraph {
+  text-align: center;
+  padding: 0 25px 0 25px;
+}
+
+.bgcolor-0 {
+  background-color: #A8E6CF;
+}
+.bgcolor-1 {
+  background-color: #FFD747;
+}
+.bgcolor-2 {
+  background-color: #FF8C64;
+}
+.bgcolor-3 {
+  background-color: #FF665A;
+}
+.bgcolor-4 {
+  background-color: #F8B195;
+}
+.bgcolor-5 {
+  background-color: #FFAB2D;
 }
