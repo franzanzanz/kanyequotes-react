@@ -38,34 +38,36 @@ class App extends React.Component {
 
   render () {
     return (
-      <div id="quote-box" className={`container bgcolor-${this.state.bgcol}`}>
+      <div id="quote-box" className={`container-fluid bgcolor-${this.state.bgcol}`}>
         <img src={kanyeIcon} className="kanye-icon" alt="logo" />
-        <div className="container-quote-and-buttons">
-          <div className="quote-box">
-            <div id="text" className="quote-paragraph">
-              "{this.state.kanyeQuote}"
+        <div className="row-fluid w-100 container-quote-and-buttons">
+          <div className="col-12 col-lg-7">
+            <div className="quote-box">
+              <div id="text" className="quote-paragraph">
+                "{this.state.kanyeQuote}"
+              </div>
+              <span id="author" className="author-span">Kanye West</span>
             </div>
-            <span id="author" className="author-span">Kanye West</span>
-          </div>
-          <div className="button-row">
-            <div className="social-links">
-              <a 
-                id="tweet-quote" 
-                className="btn btn-social" 
-                href={`http://twitter.com/intent/tweet?text="${this.state.kanyeQuote}" – Kanye West`} 
-                rel="noopener noreferrer" 
-                target="_blank"
+            <div className="button-row">
+              <div className="social-links">
+                <a 
+                  id="tweet-quote" 
+                  className="btn btn-social" 
+                  href={`http://twitter.com/intent/tweet?text="${this.state.kanyeQuote}" – Kanye West`} 
+                  rel="noopener noreferrer" 
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faTwitter} />
+                </a>
+              </div>
+              <button
+                className="btn"
+                id="new-quote"
+                onClick={this.getNewQuote}
               >
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
+                {this.state.buttonLabel}
+              </button>
             </div>
-            <button
-              className="btn"
-              id="new-quote"
-              onClick={this.getNewQuote}
-            >
-              {this.state.buttonLabel}
-            </button>
           </div>
         </div>
       </div>

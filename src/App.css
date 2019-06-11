@@ -11,14 +11,12 @@ body {
   margin-bottom: 1rem;
 }
 
-.container {
+.container-fluid {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  color: black;
   transition: background-color linear 1s;
 }
 
@@ -35,8 +33,8 @@ button, input[type="submit"], input[type="reset"] {
 .btn {
   align-self: flex-end;
   box-sizing: border-box;
-  background-color: blue;
   text-decoration: none;
+  border-radius: 0;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
@@ -65,7 +63,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .quote-box {
-  width: 100%;
+  /* width: 100%; */
   font-weight: 700;
   background-color: transparent;
   padding: 2rem 0 2rem;
@@ -81,7 +79,7 @@ button, input[type="submit"], input[type="reset"] {
 
 .container-quote-and-buttons {
   padding: 0;
-  width: 40vw;
+  /* width: 40vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,6 +100,8 @@ button, input[type="submit"], input[type="reset"] {
 .quote-paragraph {
   text-align: center;
   padding: 0 25px 0 25px;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .bgcolor-0 {
@@ -121,4 +121,10 @@ button, input[type="submit"], input[type="reset"] {
 }
 .bgcolor-5 {
   background-color: #FFAB2D;
+}
+
+@media (min-width: 800px) { 
+  .quote-paragraph {
+    font-size: 2rem;
+  }
 }
