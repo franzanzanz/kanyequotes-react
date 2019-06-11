@@ -22,7 +22,7 @@ class App extends React.Component {
 
   getNewQuote() {
     this.setState({
-      buttonLabel: 'fetching…'
+      buttonLabel: 'Kanye\'s thinking…'
     });
     let promise = fetch(`https://api.kanye.rest`);
     promise.then(res => res.json()).then(result => {
